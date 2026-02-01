@@ -38,7 +38,7 @@ class MyApp extends StatelessWidget {
        debugShowCheckedModeBanner: false,
        title: 'Project App',
        theme: ThemeData(scaffoldBackgroundColor: kColorWhite),
-       home: const HomeScreen()
+       home: const SplashScreen()
       );
     });
  }

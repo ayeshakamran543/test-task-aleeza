@@ -30,12 +30,33 @@ class _SplashScreenState extends State<SplashScreen> {
         children: [
 
           /// 🔹 Background Image
-          Image.asset(
-            'assets/images/image 2.png', // your image path
-            width: double.infinity,
-            height: double.infinity,
-            fit: BoxFit.cover,
-          ),
+          Stack(
+  children: [
+    /// Image
+    Image.asset(
+      'assets/images/image 2.png',
+      width: double.infinity,
+      height: double.infinity,
+      fit: BoxFit.cover,
+    ),
+
+    /// Gradient overlay
+    Container(
+      width: double.infinity,
+      height: double.infinity,
+      decoration: const BoxDecoration(
+        gradient: LinearGradient(
+          begin: Alignment.topCenter,
+          end: Alignment.bottomCenter,
+          colors: [
+            Colors.transparent,
+            Colors.black54,
+          ],
+        ),
+      ),
+    ),
+  ],
+),
 
           /// 🔹 Dark overlay (optional but makes text readable)
           Container(

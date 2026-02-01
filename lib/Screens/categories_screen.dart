@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:project/app_constants.dart';
+import 'package:project/widgets/searchbar.dart';
 import '../widgets/category_card.dart';
 import 'smartphones_screen.dart';
 
@@ -21,23 +22,13 @@ class CategoriesScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
           
-             
-               TextField(
-                decoration: InputDecoration(
-                  hintText: 'Search Products',
-                  prefixIcon: const Icon(Icons.search),
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(5.r),
-                  ),
-                ),
-              ),
-              
+          CustomSearchBar(hintText: 'Iphone'),
             
-            Text("230 Results Found",style:kStyleB2bm,selectionColor:kColorlightblack ,),  
+            Text("230 Results Found",style:kStyleL2bm,selectionColor:kColorlightblack.withOpacity(0.25),),  
             SizedBox(height: 10.h,),
             Expanded(
               child: GridView.count(
-               // padding: EdgeInsets.symmetric(horizontal: 28.w, vertical: 20.h),
+               
                 crossAxisCount: 2,
                 mainAxisSpacing: 21.h,
                 crossAxisSpacing: 28.w,

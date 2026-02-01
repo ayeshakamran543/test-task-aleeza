@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:project/Screens/productdetail.dart';
 import 'package:project/app_constants.dart';
+import 'package:project/widgets/searchbar.dart';
 import '../widgets/product_card.dart';
 
 class ProductsScreen extends StatelessWidget {
@@ -26,22 +27,23 @@ class ProductsScreen extends StatelessWidget {
           
            
           SizedBox(height: 10.h),
+          CustomSearchBar(hintText:   'Products',),
 
-          TextField(
+          // TextField(
            
-            decoration: InputDecoration(
-              hintText: 'Search Products',
-              prefixIcon: const Icon(Icons.search),
-              border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(5.r),
-              ),
-            ),
-          ),
+          //   decoration: InputDecoration(
+          //     hintText: 'Search Products',
+          //     prefixIcon: const Icon(Icons.search),
+          //     border: OutlineInputBorder(
+          //       borderRadius: BorderRadius.circular(5.r),
+          //     ),
+          //   ),
+          // ),
           Container(
             //padding: EdgeInsets.all(5.w),
             height: 30.h,
             width: 142.w,
-            child: Text("230 Results Found",style:kStyleL2,selectionColor:kColorlightblack.withOpacity(0.25),)),
+            child: Text("230 Results Found",style:kStyleL2bm,selectionColor:kColorlightblack.withOpacity(0.25),)),
           SizedBox(height: 10.h,),
           ProductCard(
   title: "iPhone 14",

@@ -25,7 +25,7 @@ class FavCard extends StatelessWidget {
       child: Row(
        // crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-            
+            Padding(padding:  EdgeInsets.only(left: 15.w,top:12.h,bottom: 14.h)),
          CircleAvatar(
             backgroundImage: AssetImage(image),
             radius: 31.r,

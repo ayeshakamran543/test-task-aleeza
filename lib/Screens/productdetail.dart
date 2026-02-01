@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:project/app_constants.dart';
 
 class ProductDetailsScreen extends StatefulWidget {
@@ -65,10 +66,10 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                             isLiked = !isLiked;
                           });
                         },
-                        child: Image.asset(
+                        child:SvgPicture.asset(
                           isLiked
-                              ? 'assets/images/Vector (1).png'
-                              : 'assets/images/Vector.png',
+                              ? 'assets/images/Vector.png'
+                              : 'assets/images/Vector(1).svg',
                           width: 26.w,
                         ),
                       ),
@@ -84,19 +85,19 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                   _detailText('Rating:', '4.9 ⭐⭐⭐⭐⭐'),
                   _detailText('Stock:', '45'),
 
-                  const SizedBox(height: 14),
+                  SizedBox(height: 9.h),
 
                    Text(
                     'Description:',
                     style: kStyleB1,
                   ),
-                   SizedBox(height: 4),
+                   
                    Text(
                     'Lorem ipsum är en utfyllnadstext från tryck- och '
                     'förlagsindustrin. Lorem ipsum har varit standard ända.',style: kStyleL2bm,
                   ),
 
-                  const SizedBox(height: 16),
+                  SizedBox(height: 6.h),
 
                    Text(
                     'Product Gallery:',
@@ -106,12 +107,12 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
 
                   GridView.builder(
                     shrinkWrap: true,
-                    physics: const NeverScrollableScrollPhysics(),
+                    physics:  NeverScrollableScrollPhysics(),
                     itemCount: 4,
-                    gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                       crossAxisCount: 2,
-                      crossAxisSpacing: 10,
-                      mainAxisSpacing: 10,
+                      crossAxisSpacing: 10.w,
+                      mainAxisSpacing: 10.h,
                     ),
                     itemBuilder: (context, index) {
                       return ClipRRect(
