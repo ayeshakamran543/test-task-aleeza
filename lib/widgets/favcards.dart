@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:project/app_constants.dart';
 
 class FavCard extends StatelessWidget {
@@ -19,59 +20,43 @@ class FavCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 318.w,
-      height: 88.h,
-      child: Card(
-        shape: RoundedRectangleBorder(
-          //borderRadius: BorderRadius.circular(12.r),
-        ),
-        child: Padding(
-          padding: EdgeInsets.all(12.w),
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.center,
+      padding: EdgeInsets.all(12.w),
+     
+      child: Row(
+       // crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+            
+         CircleAvatar(
+            backgroundImage: AssetImage(image),
+            radius: 31.r,
+          ),
+            
+          SizedBox(width: 12.w),
+            
+          /// Text Section
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-
-              /// Product Image
-              ClipRRect(
-                borderRadius: BorderRadius.circular(50.r),
-                child: Image.asset(
-                  image,
-                  height: 62.h,
-                  width: 62.w,
-                  fit: BoxFit.cover,
-                ),
+              Text(
+                title,
+                style: kStyleB2b.copyWith(color: kColorBlack),
               ),
-
-              SizedBox(width: 12.w),
-
-              /// Text Section
-              Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      title,
-                      style: kStyleB2b.copyWith(color: kColorBlack),
-                    ),
-                    SizedBox(height: 1.h),
-                    Text(
-                      price,
-                      style: kStyleL2bm,
-                    ),
-                  ],
-                ),
-              ),
-
-              /// Heart Icon (Image)
-              Image.asset(
-                'assets/images/Vector.svg', //  heart image
-                height: 19.h,
-                width: 16.w,
+              SizedBox(height: 1.h),
+              Text(
+                price,
+                style: kStyleL2bm,
               ),
             ],
-          ),  
-        ),
+          ),
+            Spacer(), 
+          /// Heart Icon (Image)
+          SvgPicture.asset(
+            'assets/images/Vector.svg', //  heart image
+            height: 19.h,
+            width: 16.w,
+          ),
+        ],
       ),
     );
   }

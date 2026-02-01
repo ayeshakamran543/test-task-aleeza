@@ -37,10 +37,10 @@ class CategoriesScreen extends StatelessWidget {
             SizedBox(height: 10.h,),
             Expanded(
               child: GridView.count(
-                padding: EdgeInsets.symmetric(horizontal: 28.w, vertical: 20.h),
+               // padding: EdgeInsets.symmetric(horizontal: 28.w, vertical: 20.h),
                 crossAxisCount: 2,
-                mainAxisSpacing: 12,
-                crossAxisSpacing: 12,
+                mainAxisSpacing: 21.h,
+                crossAxisSpacing: 28.w,
                 children: [
                   CategoryCard(
                     title: "Smartphones",

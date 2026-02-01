@@ -22,12 +22,10 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
         backgroundColor: Colors.white,
         elevation: 0,
         centerTitle: true,
-        title: const Text(
+        title: Text(
           'Product Details',
-          style: TextStyle(
-            color: Colors.black,
-            fontWeight: FontWeight.bold,
-          ),
+          style:kStyleH5 
+          
         ),
         leading: const Icon(Icons.arrow_back_ios, color: Colors.black),
       ),

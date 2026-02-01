@@ -51,7 +51,8 @@ TextStyle get kStyleH3bm => TextStyle(fontSize: 24.sp, fontWeight: FontWeight.w5
 TextStyle get kStyleH4   => TextStyle(fontSize: 20.sp, fontFamily: 'Playfair Display');
 TextStyle get kStyleH4b  => TextStyle(fontSize: 20.sp, fontWeight: FontWeight.w700, fontFamily: 'Playfair Display');
 TextStyle get kStyleH4bm => TextStyle(fontSize: 20.sp, fontWeight: FontWeight.w500, fontFamily: 'Playfair Display');
-        //body
+TextStyle get kStyleH5 => TextStyle(fontSize: 18.sp, fontWeight: FontWeight.w600, fontFamily: 'Playfair Display');
+        //bodyk
 // B1 – 16
 TextStyle get kStyleB1   => TextStyle(fontSize: 16.sp, fontFamily: 'poppins');
 TextStyle get kStyleB1b  => TextStyle(fontSize: 16.sp, fontWeight: FontWeight.w700, fontFamily: 'poppins');

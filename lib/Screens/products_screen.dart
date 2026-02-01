@@ -41,7 +41,7 @@ class ProductsScreen extends StatelessWidget {
             //padding: EdgeInsets.all(5.w),
             height: 30.h,
             width: 142.w,
-            child: Text("230 Results Found",style:kStyleB2bm,selectionColor:kColorlightblack.withOpacity(0.25),)),
+            child: Text("230 Results Found",style:kStyleL2,selectionColor:kColorlightblack.withOpacity(0.25),)),
           SizedBox(height: 10.h,),
           ProductCard(
   title: "iPhone 14",
